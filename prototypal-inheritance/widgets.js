@@ -6,7 +6,7 @@ function Widget(width, height){
 
 Widget.prototype.render = function($where){
   if (this.$elem){
-    this.$eleme.css( {
+    this.$elem.css( {
       width: this.width + "px",
       height: this.height + "px"
     } ).appendTo( $where );
