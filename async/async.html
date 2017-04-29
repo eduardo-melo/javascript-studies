@@ -1,6 +1,6 @@
 <html>
   <script>
-    function asyncify(fn){
+    /*function asyncify(fn){
       var orig_fn = fn,
 
       intv = setTimeout(function(){
@@ -29,6 +29,14 @@
 
     var a = 0;
     ajax("www.google.com", asyncify(result));
-    a++;
+    a++;*/
+    function reqListener () {
+  console.log(this.introducaoCriptografia);
+}
+
+var oReq = new XMLHttpRequest();
+oReq.addEventListener("load", reqListener);
+oReq.open("GET", "http://www.cin.ufpe.br/~mtma/introducaoCriptografia.txt");
+oReq.send();
   </script>
 </html>
